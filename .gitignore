@@ -71,3 +71,8 @@ config/*.yml
 # Misc
 .playwright-mcp/
 cypress/screenshots/
+# Playwright Visual Testing
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/

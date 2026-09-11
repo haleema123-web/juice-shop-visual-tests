@@ -74,7 +74,12 @@
     "rsn": "tsx rsn/rsn.ts",
     "rsn:update": "tsx rsn/rsn-update.ts",
     "vagrant": "cd vagrant && vagrant up",
-    "sbom": "cyclonedx-npm --omit=dev --output-format=JSON --output-file=bom.json"
+    "sbom": "cyclonedx-npm --omit=dev --output-format=JSON --output-file=bom.json",
+    "pw:test": "npx playwright test",
+    "pw:headed": "npx playwright test --headed",
+    "pw:login": "npx playwright test login.spec.js --headed",
+    "pw:home": "npx playwright test home.spec.js --headed",
+    "pw:ui": "npx playwright test --ui"
   },
   "nyc": {
     "extends": "@istanbuljs/nyc-config-typescript",
@@ -93,6 +98,7 @@
   "dependencies": {
     "@ai-sdk/openai-compatible": "^2.0.35",
     "@fontsource/roboto": "^5.2.9",
+    "@playwright/test": "^1.63.0",
     "ai": "^6.0.116",
     "beercss": "^4.0.19",
     "body-parser": "^1.20.4",
@@ -104,6 +110,7 @@
     "cookie-parser": "^1.4.7",
     "cookieconsent": "^3.1.1",
     "cors": "^2.8.5",
+    "dotenv": "^17.4.2",
     "download": "^8.0.0",
     "errorhandler": "^1.5.1",
     "ethers": "^6.16.0",
